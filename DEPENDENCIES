@@ -1,4 +1,6 @@
 DEPENDENCIES
 
 Python 2.7.11
-mechanize-0.2.5
+mechanize
+image
+PyAutoGUI
