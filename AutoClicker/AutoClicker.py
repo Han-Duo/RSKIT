@@ -1,15 +1,21 @@
 import datetime
 import random
 import time
+import pyautogui
 
-var = raw_input("Please enter something: ")
-print "you entered", var
 
-times = 5
+# get desired click count
+clickCount = int(raw_input("Enter click count: "))
 
-random.seed(datetime.datetime.now().microsecond)
+for count in range(0, clickCount):
+	# Set seed
+	random.seed(datetime.datetime.now().microsecond)
 
-for c in range(0, times):
-	sleepTime = random.uniform(0.3, 0.7)
+	# sleep time
+	sleepTime = random.uniform(0.4, 1)
 	print "Sleeping for ", sleepTime
 	time.sleep(sleepTime)
+
+	# send one mouse click
+	pyautogui.click()
+	print "Completed click: ", countaw
