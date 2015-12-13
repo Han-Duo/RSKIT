@@ -22,7 +22,7 @@ for count in range(0, clickCount):
 
 	# sleep time
 	sleepTime = random.uniform(0.3, 0.85)
-	print "Sleeping for ", sleepTime
+	print "Sleeping for", sleepTime
 	time.sleep(sleepTime)
 
 	# check if user moved the mouse
@@ -36,7 +36,8 @@ for count in range(0, clickCount):
 	
 	#sleep while mouse is down
 	sleepTime = random.uniform(0.08, 0.25)
-	print "Mouse down and sleep for ", sleepTime
+	print "Mouse down"
+	print "Sleeping for", sleepTime
 	time.sleep(sleepTime)
 
 	# check if user moved the mouse
@@ -49,6 +50,7 @@ for count in range(0, clickCount):
 		break
 
 	#mouse up
+	print "Mouse up"
 	pyautogui.mouseUp(x=xPos, y=yPos, button='left')
 
-	print "Completed click: ", count
+	print "Completed click:", (count + 1), "/", clickCount
